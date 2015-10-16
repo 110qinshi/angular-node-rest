@@ -1,0 +1,104 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+      <!-- bower:css -->
+      <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,client}) app/app.css -->
+    <link rel="stylesheet" href="app/app.css">
+
+    <link rel="stylesheet" href="http://imgcache.varicom.im/css/site/open/open_3/page.css">
+
+
+    <link rel="stylesheet" href="http://imgcache.varicom.im/css/standard_file/public.css">
+    <link rel="stylesheet" href="http://imgcache.varicom.im/css/standard_file/animation.css">
+    
+    <link rel="stylesheet" href="style/fontello.css">
+    <link rel="stylesheet" href="http://imgcache.varicom.im/css/site/open/open_3/log.css">
+      <!-- injector:css -->
+      <link rel="stylesheet" href="app/app.css">
+      <!-- endinjector -->
+    <!-- endbuild -->
+  </head>
+  <body ng-app="openApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <header class="vc_pc_head">
+        <div class="vc_head_logo">
+          <a href="#">
+            <h1>麦潮</h1>
+            <h2>3分钟为你定制专属APP</h2>
+          </a>
+        </div>
+        <div class="vc_head_right">
+          <ul>
+            <li><a class="reg_btn green" href="#">我要定制</a></li>
+            <li><a class="log_btn blue" href="#">管理APP</a></li>
+          </ul>
+        </div>
+      </header>
+
+    <div class="container" data-ui-view="view"></div>
+          <footer class="vc_pc_foot">
+        <nav class="vc_foot_nav">
+          <ul>
+            <li><a href="#">麦潮官网</a></li>
+            <li><a href="#">功能说明</a></li>
+            <li><a href="#">服务价格</a></li>
+            <li><a href="#">定制案例</a></li>
+            <li><a href="#">APP定制协议</a></li>
+            <li><a href="#">联系我们</a></li>
+          </ul>
+        </nav>
+        <div class="vc_foot_copyright">
+          <p>客服电话：0755-86559100 9:30-18:30（周一至周五） Copyright © 2015 Varicom.All Rights Reserved</p>
+        </div>
+      </footer>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- build:js({client,node_modules}) app/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/json3/lib/json3.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+      <!-- endbower -->
+    <!-- endbuild -->
+
+
+        <!-- build:js(.tmp) app/app.js -->
+
+        <script src="app/app.js"></script>
+       
+        <script src="common/open.module.js"></script>
+        <script src="app/home/home.js"></script>
+        <script src="app/user/user.js"></script>
+        <script src="app/main/activity/activity.js"></script>
+          <!-- injector:js -->
+          
+         
+          <!-- endinjector -->
+
+        <!-- endbuild -->
+</body>
+</html>

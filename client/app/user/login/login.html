@@ -1,0 +1,41 @@
+<div class="vc_pc_content">
+	<div class="box">
+
+		<section>
+			<form name="loginForm" novalidate ng-submit="loginUser()">
+				<ul>
+					<li class="text">
+						<label for="log_user_name"> <i class="icon_user"></i>
+						</label>
+						<input id="log_user_name" ng-model="login.username" type="text" placeholder="请输入麦潮帐号" required ng-focus="blur()"/></li>
+					<li class="text">
+						<label for="log_user_pswd"> <i class="icon_lock"></i>
+						</label>
+						<input id="log_user_pswd" ng-model="login.password" type="password" placeholder="请输入密码" required ng-focus="blur()" /></li>
+					<li class="pswd_options">
+						<div class="pswd_memory">
+							<input id="pswd_memory" type="checkbox" checked>
+							<label for="pswd_memory">
+								<i class="icon_ok_1"></i>
+								记住密码
+							</label>
+						</div>
+						<div class="pswd_forget">
+							<a href="#">忘记密码？</a>
+						</div>
+					</li>
+					<li class="button_box">
+					   {{valid}}
+						<button type="submit" class="log_btn blue" ng-disabled="loginForm.$invalid">登　录</button>
+					</li>
+					<li class="login_hint">
+						还没有麦潮帐号？
+						<a href="#">点此注册</a>
+					</li>
+				</ul>
+			</form>
+		</section>
+
+	</div>
+
+</div>

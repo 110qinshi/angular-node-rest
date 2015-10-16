@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="http://imgcache.varicom.im/css/site/open/page.css">
+<style>
+    .checked{background:#2077ce;color:white;}
+</style>
+<div class="page_right activity">
+    <div class="page_title">
+        <h3>活动</h3>
+    </div>
+
+    <div class="page_tool">
+
+        <div class="left">
+            <a href="#"><i class="iconfont">&#xe618;</i>新增活动</a>
+            <a href="#"><i class="iconfont">&#xe66e;</i>复制活动</a>
+            <a href="#"><i class="iconfont">&#xe615;</i>编辑</a>
+            <a href="#"><i class="iconfont">&#xf0003;</i>取消活动</a>
+        </div>
+    </div>
+
+    <div class="page_content">
+        <ul class="table_title">
+            <li>
+                <p>活动名称</p>
+                <p>领队</p>
+                <p>人数</p>
+                <p>出发时间</p>
+                <p>返程时间</p>
+                <p>状态</p>
+                <p>操作</p>
+            </li>
+        </ul>
+        <ul class="table_box">
+            <li ng-repeat="activity in activitys" ng-click="selectLi(activity,this)" class="{{bg_color}}">
+                <p>{{activity.name}}</p>
+                <p>{{activity.leader}}</p>
+                <p>{{activity.num}}</p>
+                <p>{{activity.startDate}}</p>
+                <p>{{activity.endDate}}</p>
+                <p>{{activity.status}}</p>
+                <p>置顶</p>
+            </li>
+        </ul>
+    </div>
+
+</div>
