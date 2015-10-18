@@ -27,6 +27,19 @@
                         return $ocLazyLoad.load('app/main/activity/activity.controller.js');
                     }]
                 }
+            }).state('add',{
+                url: '/add',
+                views:{
+                    'view':{
+                        templateUrl:'app/main/activity/add/addActivity.html',
+                        controller :'addActivityController'
+                    }
+                },
+                resolve:{
+                    loadMyCtrl:['$ocLazyLoad', function($ocLazyLoad){
+                        return $ocLazyLoad.load('app/main/activity/add/add.activity.controller.js');
+                    }]
+                }
             });
     }
     fActivity.$inject = ['$stateProvider'];
