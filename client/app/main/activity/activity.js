@@ -13,7 +13,7 @@
 
     function fActivity($stateProvider) {
         $stateProvider
-            .state('activity', {
+            .state('home.activity', {
                 url: '/activity',
                 views: {
                     'view': {
