@@ -24,7 +24,8 @@ angular.module('open.home')
         resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
           loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
             // you can lazy load files for an existing module
-            return $ocLazyLoad.load('app/home/home.controller.js');
+            return $ocLazyLoad.load(['app/home/home.controller.js',
+            'app/home/common.service.js']);
           }]
         }      
       });

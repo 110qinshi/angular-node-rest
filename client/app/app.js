@@ -7,9 +7,9 @@
       'ui.router',
       'oc.lazyLoad',
       'open.core'
-    ])
-   
-    .config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$locationProvider', fOpenAppConfig]);
+    ]).constant('modalConfig', {
+      containerSelector: 'body'
+  }).config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$locationProvider', fOpenAppConfig]);
 
   function fOpenAppConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $locationProvider) {
 

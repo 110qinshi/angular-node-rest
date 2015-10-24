@@ -7,6 +7,7 @@
 
     function addActivityController($scope) {
         console.log('add activity!');
+        debugger;
     }
     addActivityController.$inject = ['$scope'];
 })();

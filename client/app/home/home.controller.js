@@ -17,9 +17,30 @@
 })();*/
 
 'use strict';
-	angular.module('openApp').controller('HomeController', fHomeController);
+	angular.module('openApp').controller('HomeController', fHomeController)
+		.controller('dialogController', fDialogController)
+		.factory('homeComm', fHomeCommService);
 
-	function fHomeController() {
-		
-
+	function fHomeCommService(comModal) {
+		var config = {
+			controller:'dialogController',
+			templateUrl:'commonDialog.html'
+		};
+		return comModal(config);
 	}
+
+	function fDialogController($scope,homeComm) {
+		$scope.close = function() {
+			homeComm.deactivate();
+		}
+	}
+	function fHomeController($scope,homeComm) {
+
+		console.log("xxxxx dialog");
+		$scope.openDialog = function() {
+			homeComm.activate({title:'你好'});
+		}
+		$scope.openDialog2 = function($scope) {
+		}
+	}
+fHomeController.inject = ['$scope','comModal'];

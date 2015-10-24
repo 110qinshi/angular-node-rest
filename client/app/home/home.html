@@ -1,3 +1,7 @@
+<style>
+	.dialog_cover{z-index:99;text-align:center;position: fixed;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.5);height: 100%;width: 100%;}
+	.dialog_body{display:inline-block;width: 300px;height:100px;margin-top: 400px;border: 1px solid;position: relative;background-color: white;}
+</style>
 <div class="index_box user_manage">
 			<header class="vc_pc_head">
 				<div class="vc_head_logo">
@@ -36,8 +40,20 @@
 							<li><a href="#"><i class="icon_users"></i> 用户管理</a></li>
 							<li><a href="#"><i class="icon_comment_alt"></i> 群发消息</a></li>
 							<li><a href="#"><i class="icon_wrench"></i> 操作员管理</a></li>
+							<li>
+								<button ng-click="openDialog()">弹窗</button>
+								<button ng-click="openDialog2()">弹窗2</button>
+							</li>
 						</ul>
 					</section>
+					<script type="text/ng-template" id="commonDialog.html">
+						<div class="dialog_cover">
+								<div class="dialog_body">
+									<span ng-bind="title"></span>
+									<button ng-click="close()">x</button>
+							</div>
+						</div>
+					</script>
 					<div ui-view="view"></div>
 					<section class="page_right user_home">
 						<div class="user_account_info">

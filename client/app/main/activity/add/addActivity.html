@@ -1,3 +1,14 @@
-<div>
-    add activity
+<div style="margin-top:100px;">
+    <form name="addactivity" novaidate>
+        <label>活动标题</label>
+        <input name="name" ng-model="name" placeholder="请填写活动标题" ng-minlength="3" required/>
+        <div class="error" ng-show="addactivity.name.$dirty && addactivity.name.$invalid">
+            <small class="error" ng-show="addactivity.name.$error.required">
+                your name is required
+            </small>
+            <small class="error" ng-show="addactivity.name.$error.minlength">
+                your name is required to be at least 3 characters
+            </small>
+        </div>
+    </form>
 </div>
