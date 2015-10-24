@@ -41,6 +41,7 @@
 			homeComm.activate({title:'你好'});
 		}
 		$scope.openDialog2 = function($scope) {
+			homeComm.activate({title:'你好2'});
 		}
 	}
 fHomeController.inject = ['$scope','comModal'];
