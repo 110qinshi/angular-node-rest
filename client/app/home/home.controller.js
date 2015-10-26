@@ -33,12 +33,19 @@
 		$scope.close = function() {
 			homeComm.deactivate();
 		}
+		$scope.sure = function() {
+			if($scope.callback && typeof $scope.callback === 'function') {
+				$scope.callback.apply(this,[]);
+			}
+		}
 	}
 	function fHomeController($scope,homeComm) {
 
 		console.log("xxxxx dialog");
 		$scope.openDialog = function() {
-			homeComm.activate({title:'你好'});
+			homeComm.activate({title:'你好',callback:function(){
+				alert('dialog1');
+			}});
 		}
 		$scope.openDialog2 = function($scope) {
 			homeComm.activate({title:'你好2'});

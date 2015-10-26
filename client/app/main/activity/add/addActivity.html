@@ -1,3 +1,7 @@
+<style>
+    .dialog_cover{z-index:99;text-align:center;position: fixed;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.5);height: 100%;width: 100%;}
+    .dialog_body{display:inline-block;width: 300px;height:100px;margin-top: 400px;border: 1px solid;position: relative;background-color: white;}
+</style>
 <div style="margin-top:100px;">
     <form name="addactivity" novaidate>
         <label>活动标题</label>
@@ -11,4 +15,13 @@
             </small>
         </div>
     </form>
+    <button ng-click="openDialog()">选择活动</button>
 </div>
+<script type="text/ng-template" id="activityDialog.html">
+    <div class="dialog_cover">
+        <div class="dialog_body">
+            <span ng-bind="title"></span>
+            <button ng-click="close()">x</button>
+        </div>
+    </div>
+</script>

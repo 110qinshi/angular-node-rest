@@ -18,7 +18,8 @@
                 root            = angular.element($document[0].querySelector('html')),
                 element         = null,
                 html,
-                scope;
+                scope,
+                _timeoout;
             //加载模板
             if(config.template) {
                 html = $q.when(config.template);
@@ -61,7 +62,7 @@
                 }
                 $compile(element)(scope);
                 //container.attr();
-                setTimeout(function() {
+                _timeoout = setTimeout(function() {
                     deactivate();
                 },3000);
                 return $animate.enter(element, container);
@@ -76,6 +77,7 @@
                     scope = null;
                     element.remove();
                     element = null;
+                    clearTimeout(_timeoout);
                 });
             }
 
